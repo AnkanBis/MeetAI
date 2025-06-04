@@ -4,6 +4,11 @@ import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { authClient } from "@/lib/auth.client";
 
+/**
+ * Renders the main authentication page, allowing users to sign up, log in, or sign out.
+ *
+ * Displays a sign-up form for new users and a login form for existing users when not authenticated. If a user session exists, shows the logged-in user's name and a sign-out button.
+ */
 export default function Home() {
     const { data: session } = authClient.useSession()
 
